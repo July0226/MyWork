@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        fragment1 = new BlankFragment();
+        fragment1 = new Fragment1();
         fragment2 = new Fragment2();
         fragment3 = new Fragment3();
         fragment4 = new Fragment4();
@@ -35,8 +35,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         fm = getSupportFragmentManager();
 
         initial();
-
-        fragment_hide();
 
         linearLayout1.setOnClickListener(this);
         linearLayout2.setOnClickListener(this);

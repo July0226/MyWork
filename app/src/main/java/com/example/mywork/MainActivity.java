@@ -40,8 +40,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         linearLayout2.setOnClickListener(this);
         linearLayout3.setOnClickListener(this);
         linearLayout4.setOnClickListener(this);
-
-
     }
 
     private void fragment_show(Fragment fragment) {

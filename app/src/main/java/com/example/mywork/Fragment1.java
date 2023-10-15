@@ -26,13 +26,10 @@ public class Fragment1 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         view = inflater.inflate(R.layout.tab1,container,false);
         recycleView = view.findViewById(R.id.RecyclerView);
         initdata();
         adapter = new Myadapter(this.getActivity(),name_list);
-
-
 
         LinearLayoutManager manager = new LinearLayoutManager(this.getActivity());
         manager.setOrientation(RecyclerView.VERTICAL);
@@ -40,7 +37,7 @@ public class Fragment1 extends Fragment {
         recycleView.addItemDecoration(new DividerItemDecoration(this.requireActivity(),DividerItemDecoration.VERTICAL));
         recycleView.setHasFixedSize(true);
         recycleView.setAdapter(adapter);
-        // Inflate the layout for this fragment
+
         return view;
     }
 

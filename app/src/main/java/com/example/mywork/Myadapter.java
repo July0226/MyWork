@@ -1,6 +1,8 @@
 package com.example.mywork;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,8 +33,20 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.Myholder> {
 
     @Override
     public void onBindViewHolder(@NonNull Myholder holder, int position) {
-        holder.textView.setText(list1.get(position));
+        String text = list1.get(position);
+        holder.textView.setText(text);
+        holder.textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Bundle bundle = new Bundle();
+                bundle.putString("text",text);
+                Intent intent = new Intent(context1, Detail_ui.class);
+                intent.putExtras(bundle);
+                context1.startActivity(intent);
+            }
+        });
     }
+
     @Override
     public int getItemCount() {
         return list1.size();
